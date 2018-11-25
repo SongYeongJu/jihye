@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="action_settings">Delete this travel</string>
+    <string name="title_activity_money_list"></string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
+</resources>
