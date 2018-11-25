@@ -411,6 +411,7 @@ public class AddMoneyActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         try {
+            // pic from gallery
             if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && null != data) {
                 //data에서 절대경로로 이미지를 가져옴
                 Uri uri = data.getData();
@@ -421,12 +422,16 @@ public class AddMoneyActivity extends AppCompatActivity {
                 Bitmap scaled = Bitmap.createScaledBitmap(bitmap, 1024, nh, true);
                 itemImageView.setImageBitmap(scaled);
                 bitmapImage = scaled;
+                img.setImageResource(R.drawable.colored_image);
             }
+            // pic from camera
             if (requestCode == CAMERA_CODE && resultCode == RESULT_OK ) {
                 Log.d("song","camera code");
                 itemImageView.setImageURI(photoUri);
                 Drawable drawable = itemImageView.getDrawable();
                 bitmapImage= ((BitmapDrawable)drawable).getBitmap();
+                img.setImageResource(R.drawable.colored_image);
+
                 Log.d("song","camera code finish");
             }
         } catch (Exception e) {
@@ -436,10 +441,12 @@ public class AddMoneyActivity extends AppCompatActivity {
         }
 
         try {
+            // get location from map
             if(requestCode==1234) {
                 LatLng cur=(LatLng) data.getExtras().get("location");
                 item.setLat(cur.latitude+"");
                 item.setLon(cur.longitude+"");
+                map.setImageResource(R.drawable.colored_map);
                 Log.d("mmap","cur location: "+cur);
             }
         }catch (Exception e) {

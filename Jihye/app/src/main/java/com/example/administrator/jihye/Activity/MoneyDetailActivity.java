@@ -109,13 +109,16 @@ public class MoneyDetailActivity extends AppCompatActivity {
         }
 
         mapButton=(ImageButton)findViewById(R.id.GoMapButton);
-        mapButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mapIntent=new Intent(getApplicationContext(),MapsActivity2.class);
-                mapIntent.putExtra("info",item);
-                startActivity(mapIntent);
-            }
-        });
+        if(item.getLat()!=null && item.getLon()!=null) {
+            mapButton.setImageResource(R.drawable.colored_map);
+            mapButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent mapIntent = new Intent(getApplicationContext(), MapsActivity2.class);
+                    mapIntent.putExtra("info", item);
+                    startActivity(mapIntent);
+                }
+            });
+        }
     }
 }

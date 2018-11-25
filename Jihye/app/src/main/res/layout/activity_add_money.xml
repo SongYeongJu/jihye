@@ -249,7 +249,7 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@drawable/uncolored_map" />
 
         <Button
             android:id="@+id/SaveButton"
