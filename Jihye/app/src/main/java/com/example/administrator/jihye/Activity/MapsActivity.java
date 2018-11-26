@@ -182,5 +182,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         makerOptions.position(curr);
         curmarker=mMap.addMarker(makerOptions);        // 마커를 생성한다.
         mMap.moveCamera(CameraUpdateFactory.newLatLng(curr));        //카메라를 위치로 옮긴다.
+        mMap.setMinZoomPreference(12);
     }
 }
