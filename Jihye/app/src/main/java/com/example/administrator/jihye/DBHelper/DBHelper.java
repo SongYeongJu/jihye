@@ -306,8 +306,6 @@ public class DBHelper extends SQLiteOpenHelper {
         } catch(Exception e){}
         return null;
     }
-
-
     public ArrayList<Travel> getAllTravel() {
         try {
             StringBuffer sb = new StringBuffer();
@@ -353,7 +351,6 @@ public class DBHelper extends SQLiteOpenHelper {
         sb.append(" WHERE _ID ="+ id+";");
         db.execSQL(sb.toString());
     }
-
     public void delItemById(long id){
         Item item=getItemById(id);
         String filename = item.getTravelName() + "_" + item.getItemName() + ".png";

@@ -292,6 +292,10 @@ public class AddMoneyActivity extends AppCompatActivity {
                     item.setImage(abpath);
                     OutputStream out = null;
                     try {
+                        if(path==null)
+                            Log.d("song","path is null");
+                        else
+                            Log.d("song","path is not null");
                         fileCacheItem.createNewFile();
                         out = new FileOutputStream(fileCacheItem);
                         bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, out);

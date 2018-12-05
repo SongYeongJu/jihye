@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
         File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS+"/jihye_app");
         File dir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "jihye_app");
+        path.mkdir();
+        dir.mkdir();
 
         dbHelper = new DBHelper( MainActivity.this, "Jihye_DB", null, 1);
         travelList=(GridView)findViewById(R.id.travelList);

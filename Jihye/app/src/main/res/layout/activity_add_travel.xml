@@ -22,10 +22,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="10dp"
         android:layout_weight="1"
         android:gravity="center_horizontal|bottom"
-        android:layout_margin="10dp"
-        android:text="여행 날짜" />
+        android:text="Travel Date" />
 
 
         <LinearLayout
@@ -44,9 +44,9 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="2"
-                android:gravity="center"
                 android:background="#f1f1f1"
-                android:text="시작" />
+                android:gravity="center"
+                android:text="Start" />
 
             <ImageView
                 android:id="@+id/StartDayCalImageView"
@@ -86,9 +86,9 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="2"
-                android:gravity="center"
                 android:background="#f1f1f1"
-                android:text="도착" />
+                android:gravity="center"
+                android:text="Finish" />
 
             <ImageView
                 android:id="@+id/FinishDayCalImageView"

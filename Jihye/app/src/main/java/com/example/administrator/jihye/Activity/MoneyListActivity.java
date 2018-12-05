@@ -85,7 +85,7 @@ public class MoneyListActivity extends AppCompatActivity {
         }catch (Exception e){}
 
 
-        sumText1.setText("총합 : EUR "+dbHelper.getTravelMoneySum(TravelName));
+        sumText1.setText("Total : EUR "+dbHelper.getTravelMoneySum(TravelName));
 
     }
 
@@ -109,9 +109,9 @@ public class MoneyListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 double eur=dbHelper.getTravelMoneySum(TravelName);
                 if(checkEUR){
-                    sumText1.setText( "총합 : EUR " + eur );
+                    sumText1.setText( "Total : EUR " + eur );
                 }else {
-                    sumText1.setText( "총합 : KRW " + eur * 1300 );
+                    sumText1.setText( "Total : KRW " + eur * 1300 );
                 }
                 checkEUR= !checkEUR;
             }
@@ -143,7 +143,7 @@ public class MoneyListActivity extends AppCompatActivity {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
             alertDialogBuilder.setTitle("Delete this travel");
 
-            alertDialogBuilder.setMessage("여행을 삭제할까요?")
+            alertDialogBuilder.setMessage("Do you really want to delete this trip?")
                     .setCancelable(false)
                     .setPositiveButton("yes",
                             new DialogInterface.OnClickListener() {

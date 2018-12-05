@@ -65,7 +65,7 @@ public class MoneyDetailActivity extends AppCompatActivity {
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
                 alertDialogBuilder.setTitle("Delete this item");
 
-                alertDialogBuilder.setMessage("아이템을 삭제할까요?")
+                alertDialogBuilder.setMessage("Do you really want to delete this item??")
                         .setCancelable(false)
                         .setPositiveButton("yes",
                                 new DialogInterface.OnClickListener() {
